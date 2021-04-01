@@ -1,7 +1,7 @@
 //variaveis da led
 const int vermelho = 5;
 const int verde = 6;
-const int azul = 7
+const int azul = 7;
 
 bool estadoLedVermelho = false;
 
@@ -22,10 +22,10 @@ void setup()
   pinMode(azul, OUTPUT);
   
   Serial.begin(9600);
-	//nome do grupo
+  //nome do grupo
   Serial.println("AC1 - Meu Primeiro Projeto 2021");
   Serial.println("                           V1.0");
-  Serial.println("Grupo: ALCATEIA              ");
+  Serial.println("Grupo: alcateia              ");
 }
 //acender e apagar led vermelho
 void loop()
@@ -42,17 +42,17 @@ void loop()
   }
   if(getTemperatura() > 15){
     ledAzul(true);
-	  Serial.printnl("temperatura elevada");
+	  Serial.println("temepatura elevada");
   }else{
   	ledAzul(false); 
-	  Serial.printnl("temperatura ideal");
+	  Serial.println("temepatura ideal");
   }
-	if(get luminosidade()>5{
+	if(getLuminosidade()>5{
 		ledVerde(true);
-		serial.printnl("luminosidade elevada");
+		Serial.println("luminosidade elevada");
 	}else}
 	   ledVerde(false);
-	   Serial.printnl("luminosidade ideal")
+	   Serial.println("luminosidade ideal")
 }
   delay(10);
 }
@@ -72,7 +72,7 @@ int getTemperatura(){
 	temperaturaC = map(((analogRead(A0) - 20) * 3.04), 0, 1023, -40, 125);
   	return temperaturaC;
 } 
-
+//funcao de leitura da luminosidade
 int getLuminosidade(){
   	int luminosidade;
 	luminosidade = map(analogRead(A1), 6, 619, -3, 10);
