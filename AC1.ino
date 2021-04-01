@@ -47,13 +47,13 @@ void loop()
   	ledAzul(false); 
 	  Serial.println("temepatura ideal");
   }
-	if(getLuminosidade()>5{
-		ledVerde(true);
-		Serial.println("luminosidade elevada");
-	}else}
-	   ledVerde(false);
-	   Serial.println("luminosidade ideal")
-}
+	if(getLuminosidade() > 5){
+    ledVerde(true);
+    Serial.println("luminosidade elevada");
+  }else{
+  	ledVerde(false);
+    Serial.println("luminosidade ideal");
+  }
   delay(10);
 }
 
@@ -61,7 +61,7 @@ void ledVermelho(bool estado){
  digitalWrite(vermelho,estado);
 }
 void ledVerde(bool estado){
-  digitalWrite(verde,estado);
+ digitalWrite(verde,estado);  
 }
 void ledAzul(bool estado){
 	digitalWrite(azul,estado);
