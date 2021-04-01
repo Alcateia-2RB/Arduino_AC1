@@ -58,7 +58,7 @@ void loop()
 }
 
 void ledVermelho(bool estado){
-  digitalWrite(vermelho,estado);
+ digitalWrite(vermelho,estado);
 }
 void ledVerde(bool estado){
   digitalWrite(verde,estado);
